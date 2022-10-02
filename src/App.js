@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import React,{ useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteUser } from "./features/Users";
 import Swal from "sweetalert2";
@@ -88,9 +88,6 @@ function App() {
       {usersList.length === 0 && (
         <div className="text-center bg-light py-3 shadow-sm rounded">
           <p>There is no users yet.</p>
-          <button className="btn btn-primary" onClick={() => setModel(true)}>
-            Add new user
-          </button>
         </div>
       )}
     </div>
